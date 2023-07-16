@@ -3,6 +3,12 @@
   --background: #2f303a;
   --title-nav-color: #212121;
   --text-contacts-color: #757575;
+  --regular-customer-color: #afb1b8;
+  --regular-customer-background-color: #fff;
+  --social-links-color: #afb1b8;
+  --social-links-background-color: #fff;
+  --icon-footer-color: #fff;
+  --icon-footer-background-color: #ffffff1a;
   --webstudio-font-family: Roboto, Arial, sans-serif;
 }
 
@@ -24,6 +30,12 @@ ul {
 .container {
   margin: 0 auto;
   max-width: 1600px;
+}
+
+.section94px {
+  margin: 0 auto;
+  max-width: 1170px;
+  padding: 94px 0 94px 0;
 }
 
 /* Header Section */
@@ -49,6 +61,7 @@ ul {
   letter-spacing: 0.03em;
   line-height: 1.19;
   margin: 0;
+  padding: 0;
   text-align: left;
   text-decoration-line: none;
 }
@@ -100,8 +113,10 @@ ul {
   text-decoration-line: none;
 }
 
-.contact-active:hover,
-.contact-active:focus {
+.email:hover,
+.phone:hover,
+.email:focus,
+.phone:focus {
   color: var(--webstudio-color);
 }
 
@@ -151,12 +166,13 @@ ul {
 /* ATTENTION TO DETAILS advertising Section*/
 
 .big-icons-list {
+  padding-top: 94px;
   display: flex;
   justify-content: center;
   gap: 30px;
 }
 
-.icon-area {
+.big-icon-area {
   display: flex;
   background-color: #f5f4fa;
   height: 120px;
@@ -165,26 +181,12 @@ ul {
   align-items: center;
 }
 
-.section {
-  margin: 0 auto;
-  max-width: 1170px;
-  padding: 94px 0;
-}
-
 .advertising {
   display: flex;
-}
-
-.advertising-card-left {
-  padding: 0 15px 0 0;
-}
-
-.advertising-card-center {
-  padding: 0 15px;
-}
-
-.advertising-card-right {
-  padding: 0 0 0 15px;
+  margin: 0 auto;
+  max-width: 1170px;
+  gap: 30px;
+  justify-content: space-between;
 }
 
 .advertising-title {
@@ -196,9 +198,12 @@ ul {
   margin: 0;
   text-align: left;
   text-transform: uppercase;
+  padding-top: 30px;
 }
 
 .advertising-text {
+  width: 270px;
+  height: 75px;
   font-size: 14px;
   letter-spacing: 0.03em;
   line-height: 1.71;
@@ -249,7 +254,6 @@ ul {
 .photo-with-caption {
   background-color: #fff;
   border-radius: 0px 0px 4px 4px;
-
   /* material shadow v1 */
   box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
     0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
@@ -277,6 +281,24 @@ ul {
   display: flex;
   gap: 10px;
   justify-content: center;
+  padding-bottom: 30px;
+}
+
+.icon {
+  width: 44px;
+  height: 44px;
+  background-color: var(--social-links-background-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 22px;
+  color: var(--social-links-color);
+}
+
+.icon:hover,
+.icon:focus {
+  background-color: var(--webstudio-color);
+  color: var(--social-links-background-color);
 }
 
 /* Regular Customers */
@@ -289,6 +311,7 @@ ul {
   align-items: center;
   border-radius: 4px;
   border: 1px solid #afb1b8;
+  color: var(--regular-customer-color);
 }
 
 .regular-customers-icons-list {
@@ -297,16 +320,28 @@ ul {
   gap: 30px;
 }
 
+.regular-customers-icon:hover,
+.regular-customers-icon:focus {
+  color: var(--webstudio-color);
+}
+
 /* Footer Section */
 .footer {
   background-color: var(--background);
 }
 
 .footer-text {
-  text-align: left;
-  max-width: 1170px;
+  align-items: baseline;
+  display: flex;
+  gap: 94px;
   margin: 0 auto;
-  padding: 40px 0;
+  max-width: 1170px;
+  padding: 60px 0 60px 0;
+}
+
+.footer-logo {
+  margin: 0 0 28px 0;
+  padding: 0;
 }
 
 .address {
@@ -317,11 +352,12 @@ ul {
   font-weight: 400;
   letter-spacing: 0.03em;
   line-height: 1.14;
-  text-align: left;
+  padding-bottom: 12px;
 }
 
 .contacts-footer {
   padding: 0;
+  margin: 0;
 }
 
 .contact-footer {
@@ -330,9 +366,46 @@ ul {
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
-  line-height: 1.8;
   letter-spacing: 0.42px;
+  line-height: 1.8;
   text-decoration-line: none;
+}
+
+.find-us-on-text {
+  color: #fff;
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0.42px;
+  line-height: normal;
+  padding-top: 15px;
+  text-transform: uppercase;
+}
+
+.footer-icons-list {
+  display: flex;
+}
+
+.icon-footer {
+  display: inline-block;
+  margin-right: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-footer {
+  background-color: var(--icon-footer-background-color);
+  border-radius: 22px;
+  color: var(--icon-footer-color);
+  display: flex;
+  height: 44px;
+  width: 44px;
+}
+
+.icon-footer:hover,
+.icon-footer:focus {
+  background-color: var(--webstudio-color);
 }
 
 /* Portfolio Page*/
